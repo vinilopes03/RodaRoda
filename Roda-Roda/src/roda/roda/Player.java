@@ -13,9 +13,12 @@ package roda.roda;
 public class Player {
     
     private String nome;
+    private int pontuacao;
+    private int tentativa;
     
     public Player(){
-        
+        tentativa = 0;
+        pontuacao = 0;
     };
     
     public String getNome(){
@@ -25,6 +28,24 @@ public class Player {
     public void setNome(String nome){
         this.nome = nome;
     }
+    
+    public void setPontuacao(int pontos){
+        this.pontuacao = pontos;
+    }
+    public void ganhaPontos(int pontos){
+        this.pontuacao += pontos;
+    }
+    public int getTenta(){
+        return tentativa;
+    }
+    public void setTenta(){
+        tentativa+=1;
+    }
+    
+        public int getPontuacao(){
+        return pontuacao;
+    }
+    
     
     
 }
